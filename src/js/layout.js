@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { Home } from "./views/home";
+import { Contacts } from "./views/Contacts.jsx";
 import injectContext from "./store/appContext";
 
 
@@ -15,7 +15,7 @@ const Layout = () => {
 		<div>
 			<BrowserRouter basename={basename}>
 					<Routes>
-						<Route path="/" element={<Home />} />
+						<Route path="/" element={<Contacts />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
 			</BrowserRouter>
