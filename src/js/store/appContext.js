@@ -21,8 +21,7 @@ const injectContext = PassedComponent => {
 			})
 		);
 
-		useEffect(() => {
-			console.log("Ejecutandose");							
+		useEffect(() => {						
 			state.actions.getUser();			
 		}, []);
 

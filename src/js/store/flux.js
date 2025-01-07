@@ -5,14 +5,28 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 
-			getUser: () => {
-				fetch('https://playground.4geeks.com/contact/agendas/Yohebyth')
-					.then(resp => resp.json())
-					.then(respJson => {
-						const serverContacts = respJson.contacts
-						setStore({ contacts: serverContacts })
-					})
+			postCreateAgenda : async() =>{
+                await fetch('https://playground.4geeks.com/contact/agendas/Yohebyth', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json' 
+                    }
+                })
+				getActions().getUser();
+            },
 
+			getUser: async () => {
+				const resp = await fetch('https://playground.4geeks.com/contact/agendas/Yohebyth')
+				if(resp.ok){
+					console.log('Usuario existe');
+					const respJson = await resp.json();
+					const serverContacts = respJson.contacts;
+					setNeed(serverContacts);            
+				}
+				else{
+					console.log('usuario no existe');           
+					getActions().postCreateAgenda(); 
+				}
 			},
 
 			handleAddContact: async (formData, navigate) => {
