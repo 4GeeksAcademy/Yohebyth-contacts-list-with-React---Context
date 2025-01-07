@@ -1,42 +1,31 @@
-body {
-    background-color: rgb(19, 21, 22);
-}
 
 .contact {
-   width: 650px;
-   height: 150px;
-    border: 1px solid rgb(100, 107, 115);
-  
-    margin-bottom: 10px;
-    border-radius: 15px;
-    color: white;
-    padding: 10px;
-    background-color: rgb(33, 37, 41);
+    width: 50rem;
+    height: 10rem;
+    border: 1px solid black;  
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
 }
 
 .case {
-    width: 100%;
- 
+    width: 100%; 
 }
 
 .user1{
-    font-size: 50px;
-    margin-top: 15px;
-    
-
+    font-size: 3rem;
+    margin-top: 0.6rem;
 }
 
 .user{
-    width: 80px;
-    height: 80px;
-    border: 1px solid rgb(19, 21, 22);
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid black;
     border-radius: 50%;
-    margin-left:5px;
+    margin-left: 1rem;
     text-align: center;
-    background-color: rgb(33, 37, 41);
 }
 
 .contacts{
-    margin-left: 50px;
-
+    margin-left: 3rem;
 }
